@@ -57,6 +57,10 @@ nav h1 {
     align-items: center;
     gap: 8px;
 }
+.btn-container{
+    display: flex;
+    gap: 10px;
+}
 
 .btn-primary { background: var(--primary); color: #000; }
 .btn-primary:hover { background: #fff; transform: translateY(-2px); }

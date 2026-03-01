@@ -1,0 +1,86 @@
+:root {
+    --primary: #00d4ff;
+    --accent: #ff007a;
+    --bg: #05070a;
+    --card-bg: rgba(17, 24, 39, 0.7);
+    --text: #e5e7eb;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #111827 0%, #05070a 100%);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== Header & Nav ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--glass);
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--primary), #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary { background: var(--primary); color: #000; }
+.btn-primary:hover { background: #fff; transform: translateY(-2px); }
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1s ease;
+}
+
+.hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero p { color: #9ca3af; font-size: 1.1rem; }
+
+/* ===== Controls ===== */
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+a{
+    text-decoration: none;
+}

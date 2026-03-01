@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Space Explorer | Pro Edition</title>
+    <link rel="stylesheet" href="../styles/cosmo.css">
+</head>
+<body>
+
+<nav>
+  <h1>NASA Explorer</h1>
+  <div class="btn-container">
+    <button class="btn btn-primary" onclick="showFavorites()">⭐ Favoritos</button>
+    <a href="../index.html"><button class="btn" style="background:#334155; color:white;">🏠 Inicio</button></a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h2>Descubre el Cosmos</h2>
+  <p>Explora la Imagen Astronómica del Día (APOD)</p>
+</section>
+
+<div class="controls">
+  <input type="date" id="start">
+  <input type="date" id="end">
+  <button class="btn btn-primary" onclick="loadRange()">🔍 Buscar Rango</button>
+  <button class="btn btn-primary" style="background:#334155; color:white;" onclick="loadToday()">📅 Hoy</button>
+</div>
+
+<div id="statusContainer"></div>
+<div class="gallery" id="gallery"></div>
+
+<div class="modal" id="modal" onclick="closeModal()">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../scripts/cosmo.js"></script>
+</body>
+</html>
