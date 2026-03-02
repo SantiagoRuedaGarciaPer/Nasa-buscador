@@ -2,10 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASA Space Explorer | Pro Edition</title>
     <link rel="stylesheet" href="../styles/cosmo.css">
     <link rel="stylesheet" href="../styles/asteroides.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
 
@@ -21,11 +23,11 @@
 <section class="hero">
   <h2>Descubre los objetos cerca de la tierra</h2>
   <p>Explora los asteroides y objetos espaciales cercanos a la Tierra en su posicion mas cercana a la tierra</p>
+  <small>Ingrese la fecha de inicio de busqueda para buscar en un rango de siete dias</small>
 </section>
 
 <div class="controls">
   <input type="date" id="start">
-  <input type="date" id="end">
   <button class="btn btn-primary" onclick="loadRange()">🔍 Buscar Rango</button>
   <button class="btn btn-primary" style="background:#334155; color:white;" onclick="loadToday()">📅 Hoy</button>
 </div>

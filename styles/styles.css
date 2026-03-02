@@ -84,3 +84,4 @@ nav h1 {
 a{
     text-decoration: none;
 }
+a button:hover { background: #fff; transform: translateY(-2px); }

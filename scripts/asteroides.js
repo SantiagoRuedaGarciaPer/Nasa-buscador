@@ -9,7 +9,6 @@ const statusContainer = document.getElementById("statusContainer");
 // Restringir fecha máxima a hoy
 const todayStr = new Date().toISOString().split("T")[0];
 document.getElementById("start").max = todayStr;
-document.getElementById("end").max = todayStr;
 
 /**
  * SERVICIOS (LÓGICA DE DATOS)
@@ -147,13 +146,11 @@ async function loadToday() {
 
 async function loadRange() {
     const start = document.getElementById("start").value;
-    const end = document.getElementById("end").value;
     
-    if (!start || !end) return showToast("Faltan fechas");
-    if (start > end) return showToast("Fecha inicio mayor a fin");
+    if (!start) return showToast("Faltan fechas");
 
     gallery.dataset.view = "all";
-    const data = await apiCall(`&start_date=${start}&end_date=${end}`);
+    const data = await apiCall(`&start_date=${start}`);
     renderGallery(data.reverse());
 }
 
